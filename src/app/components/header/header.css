@@ -1,0 +1,60 @@
+.header {
+  background: #21183b;
+  padding: 30px 20px;
+}
+
+
+.header-contenido
+{
+  display: flex;
+  max-width: 1100px;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Efecto al pasar el mouse */
+.header-contenido a:hover {
+  color: #fdfdff;
+  border: 2px solid #a78bfa;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+.logo {
+  background-color: #a78bfa;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #21183b;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+color: #bfb2fd;
+text-decoration: none;
+}
+
+.nav-links a:hover {
+color: white;
+}
+
+@media (max-width: 600px) {
+  .footer-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

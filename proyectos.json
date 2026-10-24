@@ -1,0 +1,28 @@
+{
+  "proyectos": [
+    {
+      "id": "1",
+      "nombre": "Gestor de Salud",
+      "descripcionCorta": "Sistema de gestión para profesionales de la salud.",
+      "descripcion": "Aplicación para administrar usuarios, domicilios y otros datos relacionados con la atención médica. Desarrollada como proyecto académico.",
+      "tecnologias": ["Java", "Spring Boot", "MySQL"],
+      "imagen": "assets/images/gestor-salud.png"
+    },
+    {
+      "id": "2",
+      "nombre": "Catálogo de productos",
+      "descripcionCorta": "Aplicación web para mostrar productos.",
+      "descripcion": "Proyecto frontend para organizar y visualizar productos mediante componentes, rutas y estilos adaptables.",
+      "tecnologias": ["Angular", "TypeScript", "CSS"],
+      "imagen": "assets/images/catalogo.png"
+    },
+    {
+      "id": "3",
+      "nombre": "Portfolio personal",
+      "descripcionCorta": "Mi espacio profesional en la web.",
+      "descripcion": "Portfolio desarrollado con Angular para presentar mi perfil, mostrar proyectos y gestionar solicitudes de trabajo.",
+      "tecnologias": ["Angular", "TypeScript", "JSON Server"],
+      "imagen": "assets/images/portfolio.png"
+    }
+  ]
+}

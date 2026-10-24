@@ -1,0 +1,7 @@
+<ul>
+    @for (pj of projects(); track pj.id) {
+        <li>
+            {{ pj.nombre }} - {{pj.descripcionCorta}}
+        </li>
+    }
+</ul>
