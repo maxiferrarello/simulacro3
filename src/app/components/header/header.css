@@ -3,23 +3,17 @@
   padding: 30px 20px;
 }
 
-
-.header-contenido
-{
+.header-contenido {
   display: flex;
-  max-width: 1100px;
   justify-content: space-between;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
+
+  max-width: 1500px;
+  margin: auto;
 }
 
-/* Efecto al pasar el mouse */
-.header-contenido a:hover {
-  color: #fdfdff;
-  border: 2px solid #a78bfa;
-  padding: 2px;
-  border-radius: 6px;
-}
+
 
 .logo {
   background-color: #a78bfa;
@@ -30,6 +24,7 @@
   font-size: 24px;
   font-weight: 800;
   text-decoration: none;
+  margin-left: 40px;
 }
 
 .logo span {
@@ -40,6 +35,7 @@
 .nav-links {
 display: flex;
 gap: 25px;
+margin-right: 60px;
 }
 
 .nav-links a {
