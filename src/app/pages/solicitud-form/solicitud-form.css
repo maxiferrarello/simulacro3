@@ -1,0 +1,115 @@
+
+/* Contenedor de la página */
+:host {
+  display: block;
+  min-height: 80vh;
+  padding: 40px 5%;
+  background-color: #f8f9fd;
+}
+
+/* Título */
+h2 {
+  color: #21183b;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Formulario */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #e1e5f0;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(33, 24, 59, 0.07);
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #30254d;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Campos de texto */
+input,
+textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border: 1px solid #d9ddeb;
+  border-radius: 7px;
+  background-color: #fcfcff;
+  color: #30254d;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Área de descripción */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Efecto al seleccionar un campo */
+input:focus,
+textarea:focus {
+  border-color: #5145ff;
+  box-shadow: 0 0 0 3px rgba(81, 69, 255, 0.12);
+}
+
+/* Mensajes de validación */
+form p {
+  margin: -12px 0 18px;
+  color: #dc3545;
+  font-size: 13px;
+}
+
+/* Botón de envío */
+button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #261653;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #5145ff;
+  transform: translateY(-2px);
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  :host {
+    padding: 30px 5%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}

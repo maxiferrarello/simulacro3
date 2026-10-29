@@ -1,0 +1,107 @@
+
+/* Contenedor principal */
+:host {
+  display: block;
+  min-height: 80vh;
+  padding: 40px 6%;
+  background-color: #f8f9fd;
+}
+
+/* Título principal */
+h2:first-child {
+  text-align: center;
+  color: #5145ff;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Nombre del solicitante */
+h2:nth-child(2) {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #21183b;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Información de la solicitud */
+p {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px 22px;
+  background-color: white;
+  color: #596984;
+  font-size: 15px;
+  line-height: 1.6;
+  border-bottom: 1px solid #e7e8f0;
+}
+
+/* Primer dato: descripción */
+p:first-of-type {
+  border-radius: 10px 10px 0 0;
+  border-top: 1px solid #e7e8f0;
+}
+
+/* Último dato: presupuesto */
+p:last-of-type {
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 25px;
+}
+
+/* Botones */
+button {
+  padding: 12px 20px;
+  margin: 8px 6px 0 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #261653;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+button:hover {
+  background-color: #5145ff;
+  transform: translateY(-2px);
+}
+
+/* Botón eliminar */
+button:nth-of-type(2) {
+  background-color: #dc3545;
+}
+
+button:nth-of-type(2):hover {
+  background-color: #b52a37;
+}
+
+/* Centrar los botones */
+button:first-of-type {
+  margin-left: max(0px, calc((100% - 700px) / 2));
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  :host {
+    padding: 30px 5%;
+  }
+
+  h2:nth-child(2) {
+    font-size: 25px;
+  }
+
+  p {
+    padding: 14px 16px;
+  }
+
+  button {
+    padding: 11px 14px;
+    margin: 6px 4px 0 0;
+  }
+
+  button:first-of-type {
+    margin-left: 0;
+  }
+}

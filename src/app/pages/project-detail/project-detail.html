@@ -1,1 +1,13 @@
-<p>project-detail works!</p>
+<h2>Detalles del proyecto</h2>
+
+<h2>{{ project()?.nombre }}</h2>
+
+<p>{{ project()?.descripcion }}</p>
+
+<h3>Tecnologías utilizadas:</h3>
+
+<ul>
+  @for (tecnologia of project()?.tecnologias; track tecnologia) {
+    <li>{{ tecnologia }}</li>
+  }
+</ul>

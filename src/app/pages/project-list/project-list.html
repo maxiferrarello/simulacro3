@@ -1,7 +1,68 @@
-<ul>
-    @for (pj of projects(); track pj.id) {
-        <li>
-            {{ pj.nombre }} - {{pj.descripcionCorta}}
-        </li>
+<section class="seccion-proyectos">
+
+  <div class="presentacion">
+    <span class="subtitulo">MIS PROYECTOS</span>
+
+    <h1>Ideas que se convierten en soluciones</h1>
+
+    <p>
+      Estos son algunos de los proyectos en los que trabajé,
+      donde aplico mis conocimientos en desarrollo web y backend
+      para crear aplicaciones funcionales y útiles.
+    </p>
+  </div>
+
+  <div class="contenedor-proyectos">
+
+    @for (pr of projects(); track pr.id) {
+      <article class="tarjeta-proyecto">
+
+        <div class="contenedor-imagen">
+          <img
+            [src]="pr.imagen"
+            [alt]="'Imagen del proyecto ' + pr.nombre"
+          >
+        </div>
+
+        <div class="contenido-proyecto">
+
+          <span class="categoria">
+            {{ pr.tecnologias.includes('Angular')
+                ? 'Frontend'
+                : 'Backend' }}
+          </span>
+
+          <h2>{{ pr.nombre }}</h2>
+
+          <p class="descripcion-corta">
+            {{ pr.descripcionCorta }}
+          </p>
+
+          <p class="descripcion">
+            {{ pr.descripcion }}
+          </p>
+
+          <h3>Tecnologías utilizadas</h3>
+
+          <div class="tecnologias">
+            @for (tecnologia of pr.tecnologias; track tecnologia) {
+              <span class="etiqueta-tecnologia">
+                {{ tecnologia }}
+              </span>
+            }
+          </div>
+
+          <a
+            class="boton-detalles"
+            [routerLink]="['/proyectos', pr.id]"
+          >
+            Ver detalles <span>→</span>
+          </a>
+
+        </div>
+      </article>
     }
-</ul>
+
+  </div>
+
+</section>

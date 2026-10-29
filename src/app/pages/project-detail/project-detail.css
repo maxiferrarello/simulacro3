@@ -1,0 +1,93 @@
+
+/* Contenedor principal */
+:host {
+  display: block;
+  min-height: 80vh;
+  padding: 40px 6%;
+  background-color: #f8f9fd;
+}
+
+/* Título principal */
+h2:first-child {
+  text-align: center;
+  color: #5145ff;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Nombre del proyecto */
+h2:nth-child(2) {
+  color: #21183b;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Descripción */
+p {
+  max-width: 750px;
+  margin: 0 auto 30px;
+  padding: 25px;
+  background-color: white;
+  color: #66738d;
+  font-size: 16px;
+  line-height: 1.8;
+  border-radius: 10px;
+  border: 1px solid #e1e5f0;
+  box-shadow: 0 4px 12px rgba(33, 24, 59, 0.05);
+}
+
+/* Título de tecnologías */
+h3 {
+  max-width: 750px;
+  margin: 0 auto 15px;
+  color: #21183b;
+  font-size: 20px;
+}
+
+/* Lista de tecnologías */
+ul {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+}
+
+/* Cada tecnología */
+li {
+  padding: 10px 16px;
+  background-color: #e9e8ff;
+  color: #5145ff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+li:hover {
+  background-color: #d9d6ff;
+  transform: translateY(-2px);
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  :host {
+    padding: 30px 5%;
+  }
+
+  h2:nth-child(2) {
+    font-size: 25px;
+  }
+
+  p {
+    padding: 18px;
+    font-size: 15px;
+  }
+
+  ul {
+    gap: 8px;
+  }
+}

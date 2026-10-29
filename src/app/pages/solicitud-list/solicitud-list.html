@@ -1,1 +1,22 @@
-<p>solicitud-list works!</p>
+
+<h2>Solicitudes</h2>
+
+<ul>
+  @for (soli of solicitudes(); track soli.id) {
+    <li>
+      <div class="datos-solicitud">
+        <p>{{ soli.fecha }}</p>
+        <h3>{{ soli.nombreSolicitante }}</h3>
+        <p>{{ soli.tipoProyecto }}</p>
+      </div>
+
+      <button [routerLink]="['/solicitudes', soli.id]">
+        Ver detalle
+      </button>
+    </li>
+  }
+</ul>
+
+<button [routerLink]="['/solicitudes/form']">
+  Nueva solicitud
+</button>

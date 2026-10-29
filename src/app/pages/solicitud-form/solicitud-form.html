@@ -1,1 +1,44 @@
-<p>solicitud-form works!</p>
+<h2>{{ solicitudId ?'Editar solicitud' : 'Agregar solicitud' }}</h2>
+
+<form (submit)="$event.preventDefault(); onSubmit()">
+
+    <label for="nombreSolicitante">Nombre del solicitante</label>
+    <input id="nombreSolicitante" [formField]="solicitudForm.nombreSolicitante">
+    @if (solicitudForm.nombreSolicitante().invalid() && solicitudForm.nombreSolicitante().touched()) {
+        <p>El nombre es obligatorio y tiene que tener mas de 2 caracteres</p>
+    }
+
+    <label for="presupuesto">Presupuesto</label>
+    <input id="presupuesto"  type="number" [formField]="solicitudForm.presupuesto">
+    @if (solicitudForm.presupuesto().invalid() && solicitudForm.presupuesto().touched()) {
+        <p>El presupuesto es obligatorio y tiene que ser mayor a 0</p>
+    }
+
+    <label for="email">Email</label>
+    <input id="email" type="email" [formField]="solicitudForm.email">
+    @if (solicitudForm.email().invalid() && solicitudForm.email().touched()) {
+        <p>El email es obligatorio</p>
+    }
+
+    <label for="tipoProyecto">Tipo de proyecto</label>
+    <input id="tipoProyecto" [formField]="solicitudForm.tipoProyecto">
+    @if (solicitudForm.tipoProyecto().invalid() && solicitudForm.tipoProyecto().touched()) {
+        <p>El tipo de proyecto es obligatorio</p>
+    }
+
+    <label for="descripcion">Descripcion</label>
+    <textarea id="descripcion" [formField]="solicitudForm.descripcion"></textarea>
+    @if (solicitudForm.descripcion().invalid() && solicitudForm.descripcion().touched()) {
+        <p>La descripcion es obligatoria y tiene un maximo de 100 caracteres</p>
+    }
+
+    <label for="fecha">Fecha</label>
+    <input id="fecha" type="date" [formField]="solicitudForm.fecha">   
+    @if (solicitudForm.fecha().invalid() && solicitudForm.fecha().touched()) {
+        <p>La fecha es obligatoria</p>
+    }
+
+
+    <button type="submit"> {{ solicitudId ? 'Actualizar solicitud' : 'Agregar solicitud' }}</button>
+
+</form>

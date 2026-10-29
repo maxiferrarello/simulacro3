@@ -28,7 +28,7 @@ export class ProjectsList implements OnInit {
   deleteProyecto(id: string)
   {
     this.projectService.deleteProyecto(id).subscribe({
-      next: () => {alert("El proyecto fue eliminado correctamente!")},
+      next: () => {alert("El proyecto fue eliminado correctamente!"), this.loadProyectos()},
       error: (e) => {alert("ERROR AL ELIMINAR EL PROYECTO!"),console.log(e);
       }
 

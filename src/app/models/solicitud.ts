@@ -1,6 +1,6 @@
 export interface Solicitud {
-  id?: number;
-  nombre: string;
+  id?: string;
+  nombreSolicitante: string;
   email: string;
   tipoProyecto: string;
   descripcion: string;

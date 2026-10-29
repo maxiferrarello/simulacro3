@@ -1,1 +1,19 @@
-<p>solicitud-detail works!</p>
+<h2>Detalles de solicitud</h2>
+
+<h2>{{ solicitud()?.nombreSolicitante }}</h2>
+
+<p>{{ solicitud()?.descripcion }}</p>
+
+<p>{{ solicitud()?.email}}</p>
+
+<p>{{solicitud()?.fecha}}</p>
+
+<p>{{solicitud()?.presupuesto}}</p>
+
+<button [routerLink]="['/solicitudes/form', solicitud()?.id]">
+  Editar
+</button>
+
+<button (click)="eliminarSolicitud()">Eliminar</button>
+
+<button [routerLink]="['/solicitudes']">Volver al listado</button>

@@ -3,6 +3,6 @@ export interface Project {
     nombre: string
     descripcionCorta: string
     descripcion: string
-    tecnologiasUtilizadas: string
+    tecnologias: string[]
     imagen: string
 }
